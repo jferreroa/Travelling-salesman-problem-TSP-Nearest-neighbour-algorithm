@@ -79,8 +79,5 @@ private:
 
     int vertices;
     std::vector<int> aristas;
-    static void costeMinimoAristaMenor2(Grafo G, std::vector<int> U,std::vector<int>W,std::vector<int> D, int &u, int &w);
-
-
 };
 #endif // GRAFO_H
