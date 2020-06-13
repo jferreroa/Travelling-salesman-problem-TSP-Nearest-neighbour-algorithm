@@ -43,23 +43,6 @@ int Grafo::totalVertices()
 
 
 
-/*Grafo Grafo::prim(Grafo G)
-{
-    Conjunto U(G.totalVertices());
-    Conjunto W(0); // no lo uso  W=N-U  (todos los nodos del conjunto - U
-    Grafo H(G.totalVertices());
-    int u,w;
-    int cardinalU=0;
-    U.inserta(0);
-    while(cardinalU<G.totalVertices()){
-        costeMinimoArista(G,U,W,u,w);
-        H.inserta(u,w,G.aristas[u][w]);
-        U.inserta(w);
-        cardinalU++;
-    }
-    return H;
-
-}*/
 
 std::vector<AristaGrafo> Grafo::viajanteComercioVecino(Grafo G, int v){
 
@@ -70,11 +53,7 @@ std::vector<AristaGrafo> Grafo::viajanteComercioVecino(Grafo G, int v){
         V.push_back(i);
         i++;
     }
-    /* V.push_back(0); V.push_back(1);V.push_back(2);V.push_back(3);
-    V.push_back(4); V.push_back(5);V.push_back(6);V.push_back(7);
-    V.push_back(8); V.push_back(9);V.push_back(10);V.push_back(11);
-    V.push_back(12); V.push_back(13);V.push_back(14);V.push_back(15);
-    V.push_back(16); V.push_back(17);V.push_back(18);V.push_back(19);*/   //NODOS CIUDADES(NO ES GENERICO)
+   
 
     std::vector<int> T;
     T.push_back(v);
@@ -150,23 +129,6 @@ std::string Grafo::imprime(std::string s){
 
 
 
-/*
-void Grafo::costeMinimoArista(Grafo G, Conjunto T, Conjunto W, int &u, int &w)
-{
-    int costeMinimo=Grafo::INFINITO;
-
-    w=0;
-    for(int i=u;i<G.totalVertices();i++){
-        for(int j=0;j<G.totalVertices();j++){
-            if(G.aristas[i][j]<costeMinimo && G.aristas[i][j] !=-1 && T.pertenece(i) && !T.pertenece(j)){
-                costeMinimo=G.aristas[i][j];
-                u=i;
-                w=j;
-            }
-        }
-    }
-}
-*/
 
 
 
