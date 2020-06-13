@@ -18,9 +18,7 @@ public:
     int totalVertices();
     static Grafo prim(Grafo G);
     std::vector<AristaGrafo> viajanteComercioVecino(Grafo G, int v);
-    std::vector<AristaGrafo> viajanteComercioPrim(Grafo G, int v);
     std::string imprime(std::string s);
-    static std::string imprimeVector(std::string s,int* vector, int n);
     static const int INFINITO =std::numeric_limits<unsigned short int>::max();
 
     int getPos(int row,  int col) const{ //getCoste en i,j
